@@ -1,0 +1,23 @@
+{
+	"name": "pessek/pessek_scheduling",
+	"description": "Launch a survey to choose the best date for a meeting or event",
+	"type": "elgg-plugin",
+	"keywords": ["elgg", "plugin", "poll"],
+    	"license": "proprietary",
+    	"authors": [
+        	{
+			"name": "Hermand PESSEK",
+			"email": "rhemandaddy@gmail.com"
+        	}
+    	],
+    	"extra": {
+		"installer-name": "pessek_scheduling"
+    	},
+	"require": {
+		"composer/installers": "^1.0.8",
+		"npm-asset/chart.js": "~2.7.3"
+	},
+	"conflict": {
+		"elgg/elgg": "<3.0"
+	}
+}
