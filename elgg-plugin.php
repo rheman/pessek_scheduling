@@ -8,6 +8,16 @@ if (is_dir(__DIR__ . '/vendor')) {
 }
 
 return [
+        'plugin' => [
+                'version' => '4.0',
+		'name' => 'Launch a survey to choose the best date for a meeting or event',
+                'dependencies' => [
+                        'pessek_fields' => [],
+                        'pessek_time' => [],
+			'pessek_autocomplete' => [],
+			'pessek_dropzone' => [],
+                ],
+        ],
 	'bootstrap' => \Pessek\PessekScheduling\Bootstrap::class,
 	'settings' => [
 		'enable_attachment' => 'yes',
@@ -77,6 +87,10 @@ return [
 			'required_plugins' => [
 				'groups',
 			],
+		],
+		'collection:object:pessek_scheduling:updateschedulinglisting' => [
+			'path' => '/pessekscheduling/updateschedulinglisting',
+			'resource' => 'pessek_scheduling/updateschedulinglisting',
 		],
 		'view:object:pessekscheduling:sidebar' => [
 			'path' => '/pessek_scheduling/sidebar',
